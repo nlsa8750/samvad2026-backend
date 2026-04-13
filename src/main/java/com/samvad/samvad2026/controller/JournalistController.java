@@ -24,6 +24,7 @@ public class JournalistController {
         this.statsRepository = statsRepository;
     }
 
+    // did not create dto because we are not storing any confidential information, so directly using model 
     @PostMapping("/register")
     public ResponseEntity<?> register(@Valid @RequestBody Journalist journalist) {
         Journalist saved = service.register(journalist);
